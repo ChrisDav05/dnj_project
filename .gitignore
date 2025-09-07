@@ -6,3 +6,8 @@ venv/
 # banco de dados
 *.sqlite3
 db.sqlite3
+
+# Credenciais e segredos
+*.json
+*.key
+*.pem
