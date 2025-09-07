@@ -1,0 +1,1 @@
+# Instalar Ambiente Virtual e Rodar o Requirements.txt para instalar as dependencias do projeto

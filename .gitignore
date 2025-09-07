@@ -1,0 +1,8 @@
+# venvs
+dnj-venv/
+venv/
+.env/
+
+# banco de dados
+*.sqlite3
+db.sqlite3

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Verificar Pagamento</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+    }
+    .container {
+      max-width: 500px;
+      margin: auto;
+      text-align: center;
+    }
+    input {
+      padding: 10px;
+      width: 70%;
+      margin-right: 10px;
+    }
+    button {
+      padding: 10px 15px;
+      background: #007BFF;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    .resultado {
+      margin-top: 20px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      display: none;
+      text-align: left;
+    }
+    .sucesso {
+      color: green;
+    }
+    .erro {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Verificar Pagamento</h2>
+    <input type="text" id="userId" placeholder="Digite o ID do usuário">
+    <button onclick="buscarPagamento()">Buscar</button>
+
+    <div id="resultado" class="resultado"></div>
+  </div>
+
+  <script>
+    function buscarPagamento() {
+      const userId = document.getElementById("userId").value;
+      const resultado = document.getElementById("resultado");
+
+      if (!userId) {
+        resultado.style.display = "block";
+        resultado.innerHTML = "<p class='erro'>Por favor, digite um ID.</p>";
+        return;
+      }
+
+      fetch(`/check-pagamentos/?id=${userId}`)
+        .then(res => res.json())
+        .then(data => {
+          resultado.style.display = "block";
+
+          if (data.status === "erro") {
+            resultado.innerHTML = `<p class='erro'>${data.msg}</p>`;
+            return;
+          }
+
+          // data.pagamento é um objeto único
+          const p = data.pagamento;
+          resultado.innerHTML = `
+            <p><b>ID:</b> ${p.id}</p>
+            <p><b>Nome:</b> ${p.nome || "-"}</p>
+            <p><b>Arquivo:</b> ${p.arquivo || "-"}</p>
+            <p><b>Status:</b> ${p.status}</p>
+          `;
+        })
+        .catch(err => {
+          resultado.style.display = "block";
+          resultado.innerHTML = `<p class='erro'>Erro: ${err}</p>`;
+        });
+    }
+  </script>
+</body>
+</html>
