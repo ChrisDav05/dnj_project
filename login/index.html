@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conecta DNJ - Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Trebuchet MS', sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: #e6f4f1;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            background-color: #84ccda;
+            padding: 10px 30px;
+        }
+
+        header img {
+            width: 140px;
+            height: auto;
+        }
+
+        header h1 {
+            font-family: 'Bangers', cursive;
+            font-size: 50px;
+            color: #04495e;
+        }
+
+        .login-box {
+            background: #fff;
+            padding: 40px;
+            margin-top: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+
+        .login-box h2 {
+            margin-bottom: 20px;
+            color: #04495e;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .input-group input, 
+        .input-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #84ccda;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .input-group input:focus,
+        .input-group select:focus {
+            border-color: #04495e;
+            box-shadow: 0 0 8px rgba(4, 73, 94, 0.3);
+        }
+
+        .btn-login {
+            background: #04495e;
+            color: #fff;
+            padding: 12px;
+            width: 100%;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-login:hover {
+            background: #033947;
+        }
+
+        footer {
+            margin-top: 40px;
+            width: 100%;
+            text-align: center;
+            background-color: #84ccda;
+            padding: 15px;
+            font-size: 14px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="../imagens/logo_paroquia.jpeg" alt="Logo Paróquia">
+        <h1>CONECTA DNJ</h1>
+        <img src="../imagens/logo_dnj.jpeg" alt="Logo DNJ">
+    </header>
+
+    <div class="login-box">
+        <h2>Login DNJ 2025</h2>
+        <form>
+            <div class="input-group">
+                <label for="iddnj">ID DNJ:</label>
+                <input type="text" id="iddnj" name="iddnj" placeholder="Digite seu ID DNJ">
+            </div>
+
+            <div class="input-group">
+                <label for="usuario">Usuário:</label>
+                <input type="text" id="usuario" name="usuario" placeholder="Digite seu nome">
+            </div>
+
+            <div class="input-group">
+                <label for="paroquia">Paróquia:</label>
+                <input type="text" id="paroquia" name="paroquia" placeholder="Digite sua paróquia">
+            </div>
+
+            <div class="input-group">
+                <label for="idade">Idade:</label>
+                <input type="number" id="idade" name="idade" placeholder="Digite sua idade">
+            </div>
+
+            <div class="input-group">
+                <label for="status">Status de pagamento:</label>
+                <select id="status" name="status">
+                    <option value="pendente">Pendente</option>
+                    <option value="confirmado">Confirmado</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn-login">Entrar</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>© 2025 DNJ - Todos os direitos reservados</p>
+        <p>⛪ Diocese de Picos - PI</p>
+        <p>⛪ Paróquia São Francisco de Assis - Bairro Junco</p>
+        <p>✉ dnj_2025@gmail.com | ☎ (89) 99999-9999</p>
+    </footer>
+</body>
+</html>
