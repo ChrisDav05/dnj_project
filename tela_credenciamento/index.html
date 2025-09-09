@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conecta DNJ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+</head>
+<style>
+
+    html, body {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+        
+    header{
+        display: flex;
+        justify-content: space-between;
+        background-color: #84ccda;
+    }
+
+    img {
+        width: 100%;
+        max-width: 300px; 
+        height: 210px;
+        object-fit: cover;
+    }
+
+    h1{
+        margin-top: 55px;
+        font-size: 90px;
+        font-family: Bangers, cursive;
+        color: #04495e
+    }
+
+    .content {
+        flex: 1;
+        gap: 10px
+    }
+
+    p {
+        margin-bottom: 1px;
+    }
+
+    .verified{
+        display: flex;
+        flex-direction: row; 
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    section{
+        display: flex;
+        flex-direction: row; 
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #84ccda;
+        
+    }
+
+    label {
+        font-size: 60px;
+        font-family: 'Trebuchet';
+    }
+
+    input[type="text"] {
+        font-family: 'Trebuchet';
+        font-size: 60px;
+    }
+
+    #mensagem{
+        display: flex;
+        flex-direction: row; 
+        justify-content: center;
+        font-family: 'Trebuchet';
+        font-size: 50px;
+        
+    }
+
+    .contato{
+        margin-bottom: 20px;
+    }
+
+    .selo{
+        margin-top: 10px;
+    }
+
+    input[type="button"] {
+        font-family: 'Trebuchet';
+        font-size: 45px;
+    }
+</style>
+
+<body>
+    <header>
+            <img src="/dnj_project/imagens/logo-paroquia.jpeg" alt="imagem-da-logo-da-paroquia">
+            <h1> CONECTA DNJ </h1>
+            <img src="/dnj_project/imagens/logo - dnj.jpeg" alt="imagem-da-logo-dnj">
+    </header>
+    
+    <div class="content">
+        <div class = "verified">
+            <p id = "mensagem">
+                Digite seu ID DNJ abaixo para ter acesso ao evento
+            </p>
+        </div>
+
+            <section>
+                <label for="nome"><strong> ID DNJ:</strong></label>
+                <input type="text" id="iddnj" name="iddnj">
+            </section>
+
+            <section>
+                <input type="button" value = "Verificar">
+            </section>
+    
+    </div>
+
+    <footer>
+        <div class = "selo">
+            <p><strong>© 2025 DNJ - Todos os direitos reservados</strong></p>
+        </div>
+
+        <div class = "diocese">
+            <p>
+                ⛪ Diocese de Picos - PI 
+            </p>
+        </div>
+        <div class = "paroquia">
+            <p>
+                ⛪ Paróquia São Francisco de Assis - Bairro Junco 
+            </p>
+        </div>
+        <div class = "contato">
+            <p>
+             📸 Instagram - @dnj.psfa
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
